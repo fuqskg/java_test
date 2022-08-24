@@ -38,7 +38,8 @@ class A{
 			else 
 				throw me1;
 		} catch (MyException e) {
-			System.out.println("예외처리 1");
+			System.out.println(e.getMessage()); //me1이면: null/ me2로바꾸면: ()메시지안에있는거
+			System.out.println("me1 예외처리 1");
 		}
 	}
 	
@@ -58,6 +59,7 @@ class A{
 		try {
 			abc_2(65);
 		} catch (MyException e) {
+			System.out.println(e.getMessage()); // null
 			System.out.println("예외처리 2");
 		}
 	}
